@@ -7,7 +7,8 @@ Currently compares:
  - [JSON](https://docs.python.org/2/library/json.html)
  - [Pickle](https://docs.python.org/2/library/pickle.html)
  - [cPickle](https://docs.python.org/2/library/pickle.html#module-cPickle)
- - [Transit](https://github.com/cognitect/transit-python)
+ - [Transit](https://github.com/cognitect/transit-python) (json & msgpack)
+ - [msgpack](https://github.com/msgpack/msgpack-python)
 
 More probably coming soon.
 

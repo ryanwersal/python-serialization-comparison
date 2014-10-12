@@ -32,12 +32,15 @@ def main():
 	formats = []
 	for f in os.listdir("runners"):
 		filename, ext = os.path.splitext(f)
-		if filename.startswith("run") and ext == ".py":
-			formats.append(filename.split("_")[1])
+		if filename.startswith("run_") and ext == ".py":
+			formats.append(filename[4:])
+	formats = sorted(formats)
 
 	# Benchmark.
 	for format in formats:
+		print "=" * 50
 		print "Benchmarking %s..." % format
+		print "=" * 50
 
 		for sample_info in sample_data:
 			print "Using sample %s..." % sample_info["name"]
