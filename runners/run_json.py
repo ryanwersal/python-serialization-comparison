@@ -15,6 +15,7 @@ def handle_unkown_type(obj):
 def serialize(data):
 	io = StringIO()
 	json.dump(data, io, default=handle_unkown_type)
+	return io
 
 # ==============================================================================
 def deserialize(data):

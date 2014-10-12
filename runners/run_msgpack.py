@@ -16,6 +16,7 @@ def serialize(data):
 	io = StringIO()
 	result = msgpack.packb(data, default=handle_unkown_type)
 	io.write(result)
+	return io
 
 # ==============================================================================
 def deserialize(data):

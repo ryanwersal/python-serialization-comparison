@@ -1,6 +1,6 @@
 # Python Serialization Comparison
 
-A primitive comparison between several serialization formats and their performance.
+A primitive comparison between several serialization formats and their performance and serialized size.
 
 Currently compares:
 

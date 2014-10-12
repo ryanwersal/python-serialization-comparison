@@ -9,6 +9,7 @@ import pickle
 def serialize(data):
 	io = StringIO()
 	pickle.dump(data, io)
+	return io
 
 # ==============================================================================
 def deserialize(data):

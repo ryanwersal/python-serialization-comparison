@@ -14,6 +14,7 @@ def serialize(data):
 	writer = Writer(io, "msgpack")
 	writer.register(Decimal, DecimalWriteHandler)
 	writer.write(data)
+	return io
 
 # ==============================================================================
 def deserialize(data):

@@ -37,6 +37,10 @@ def main():
 	formats = sorted(formats)
 
 	# Benchmark.
+	print "PERFORMANCE COMPARISON"
+	print "=" * 80
+	print
+
 	for format in formats:
 		print "=" * 50
 		print "Benchmarking %s..." % format
@@ -56,6 +60,19 @@ def main():
 
 		print
 		print
+
+	print "SERIALIZED SIZE COMPARISON"
+	print "=" * 80
+	print
+
+	for format in formats:
+		for sample_info in sample_data:
+			exec "from runners import run_%s as runner" % format
+			io = runner.serialize(sample_info["data"])
+			io.seek(0, os.SEEK_END)
+			size = io.tell()
+
+			print "%s - %s: %d bytes" % (format, sample_info["name"], size)
 
 # ==============================================================================
 def show_results(args, format, sample, results):

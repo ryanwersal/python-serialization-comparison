@@ -9,6 +9,7 @@ import cPickle
 def serialize(data):
 	io = StringIO()
 	cPickle.dump(data, io)
+	return io
 
 # ==============================================================================
 def deserialize(data):
